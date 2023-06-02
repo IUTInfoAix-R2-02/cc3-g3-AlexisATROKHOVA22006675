@@ -13,7 +13,8 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.Button?>
-<HBox id="scene" prefHeight="450.0" prefWidth="700.0" spacing="20.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" >
+<?import com.sun.javafx.scene.control.DoubleField?>
+<HBox id="scene" prefHeight="450.0" prefWidth="700.0" spacing="20.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.amu.iut.cc3.ToileController" >
     <Pane prefHeight="400.0" prefWidth="400.0" >
         <Circle centerX="210.0" centerY="225.0" radius="200.0" styleClass="toile"/>
         <Circle centerX="210.0" centerY="225.0" radius="150.0" styleClass="toile"/>
@@ -47,17 +48,17 @@
                 <Label text="Compétence 6 - Collaborer"/>
             </VBox>
             <VBox alignment="CENTER_LEFT" spacing="22">
-                <TextField prefHeight="20" prefWidth="40"/>
-                <TextField prefHeight="20" prefWidth="40"/>
-                <TextField prefHeight="20" prefWidth="40"/>
-                <TextField prefHeight="20" prefWidth="40"/>
-                <TextField prefHeight="20" prefWidth="40"/>
-                <TextField prefHeight="20" prefWidth="40"/>
+                <TextField fx:id="comp1" prefHeight="20" prefWidth="40"/>
+                <TextField fx:id="comp2" prefHeight="20" prefWidth="40"/>
+                <TextField fx:id="comp3" prefHeight="20" prefWidth="40"/>
+                <TextField fx:id="comp4" prefHeight="20" prefWidth="40"/>
+                <TextField fx:id="comp5" prefHeight="20" prefWidth="40"/>
+                <TextField fx:id="comp6" prefHeight="20" prefWidth="40"/>
             </VBox>
         </HBox>
         <HBox alignment="CENTER_RIGHT" spacing="25">
             <padding><Insets top="0" right="10" bottom="10" left="0"/></padding>
-            <Button text="Tracer"/>
+            <Button text="Tracer" onAction="#drawPoint"/>
             <Button text="Vider"/>
         </HBox>
     </VBox>
