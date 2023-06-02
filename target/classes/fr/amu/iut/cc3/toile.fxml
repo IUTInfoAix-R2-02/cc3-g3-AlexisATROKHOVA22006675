@@ -8,25 +8,57 @@
 <?import javafx.scene.text.Text?>
 
 
-<HBox id="scene" prefHeight="420.0" prefWidth="650.0" spacing="20.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" >
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Button?>
+<HBox id="scene" prefHeight="450.0" prefWidth="700.0" spacing="20.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" >
     <Pane prefHeight="400.0" prefWidth="400.0" >
-        <Circle centerX="200.0" centerY="200.0" radius="200.0" styleClass="toile"/>
-        <Circle centerX="200.0" centerY="200.0" radius="150.0" styleClass="toile"/>
-        <Circle centerX="200.0" centerY="200.0" radius="100.0" styleClass="toile"/>
-        <Circle centerX="200.0" centerY="200.0" radius="50.0" styleClass="toile"/>
+        <Circle centerX="210.0" centerY="225.0" radius="200.0" styleClass="toile"/>
+        <Circle centerX="210.0" centerY="225.0" radius="150.0" styleClass="toile"/>
+        <Circle centerX="210.0" centerY="225.0" radius="100.0" styleClass="toile"/>
+        <Circle centerX="210.0" centerY="225.0" radius="50.0" styleClass="toile"/>
         <Group layoutX="195.0" layoutY="195.0">
-            <Line endX="10.0" endY="5.0" startY="5.0" styleClass="croix"/>
-            <Line endX="5.0" endY="10.0" startX="5.0" styleClass="croix"/>
+            <Line endX="20.0" endY="30.0" startX="10.0" startY="30.0" styleClass="croix"/>
+            <Line endX="15.0" endY="35.0" startX="15.0" startY="25.0" styleClass="croix"/>
         </Group>
-        <Line startX="200.0" startY="0" endX="200" endY="400.0" styleClass="toile"/>
-        <Line endX="200.0" endY="400.0" rotate="60.0" startX="200.0" styleClass="toile"/>
-        <Line endX="200.0" endY="400.0" rotate="120.0" startX="200.0" styleClass="toile"/>
-        <Text x="170" y="0" text="Compétence 1" />
-        <Text x="300" y="100" text="Compétence 2" />
-        <Text x="300" y="300" text="Compétence 3" />
-        <Text x="170" y="410" text="Compétence 4" />
-        <Text x="26" y="300" text="Compétence 5" />
-        <Text x="26" y="99" text="Compétence 6" />
+        <Line startX="210.0" startY="25.0" endX="210.0" endY="425.0" styleClass="toile"/>
+        <Line endX="210.0" endY="425.0" rotate="60.0" startX="210.0" startY="25.0" styleClass="toile"/>
+        <Line endX="210.0" endY="425.0" rotate="120.0" startX="210.0" startY="25.0" styleClass="toile"/>
+        <Text x="175" y="25" text="Compétence 1" />
+        <Text x="305" y="125" text="Compétence 2" />
+        <Text x="305" y="325" text="Compétence 3" />
+        <Text x="175" y="435" text="Compétence 4" />
+        <Text x="31" y="325" text="Compétence 5" />
+        <Text x="31" y="124" text="Compétence 6" />
         <Pane fx:id="toile" styleClass="toile"/>
     </Pane>
+    <VBox alignment="CENTER">
+        <HBox>
+            <padding><Insets top="50" right="0" bottom="50" left="0"/></padding>
+            <VBox alignment="CENTER_LEFT" spacing="30">
+                <padding><Insets top="15" right="15" bottom="15" left="15"/></padding>
+                <Label text="Compétence 1 - Réaliser"/>
+                <Label text="Compétence 2 - Optimiser"/>
+                <Label text="Compétence 3 - Administrer"/>
+                <Label text="Compétence 4 - Gérer"/>
+                <Label text="Compétence 5 - Conduire"/>
+                <Label text="Compétence 6 - Collaborer"/>
+            </VBox>
+            <VBox alignment="CENTER_LEFT" spacing="22">
+                <TextField prefHeight="20" prefWidth="40"/>
+                <TextField prefHeight="20" prefWidth="40"/>
+                <TextField prefHeight="20" prefWidth="40"/>
+                <TextField prefHeight="20" prefWidth="40"/>
+                <TextField prefHeight="20" prefWidth="40"/>
+                <TextField prefHeight="20" prefWidth="40"/>
+            </VBox>
+        </HBox>
+        <HBox alignment="CENTER_RIGHT" spacing="25">
+            <padding><Insets top="0" right="10" bottom="10" left="0"/></padding>
+            <Button text="Tracer"/>
+            <Button text="Vider"/>
+        </HBox>
+    </VBox>
 </HBox>
